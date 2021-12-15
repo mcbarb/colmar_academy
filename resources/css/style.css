@@ -1,16 +1,70 @@
-* {
-    /* border: 1px solid red; */
-}
+/* RESET */
+/* source: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+/* * {
+    border: 0.5px solid red;
+} */
+
+/* NAVIGATION */
 
 .container {
     display: flex;
     justify-content: space-between;
+    height: 64px;
+    align-items: center;
 }
 
 .item {
     display: inline-block;
 }
 
+.right-wrapper .item {
+    margin-left: 16px;
+}
+
 .left-wrapper, .right-wrapper {
     display: inline-block;
+    align-items: flex-end;
+    padding: 0 24px;
+    height: 32px;
+}
+
+nav .item img {
+    /* display: inline-block; */
+    height: 32px;
+    float: left;
+    margin-right: 3px;
+}
+
+nav .item span {
+    display: inline-block;
+    height: 32px;
+    font-size: 14px;
+    padding-top: 8px;
+    /* padding-bottom: 4px; */
+}
+
+#logo span {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 4px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#logo span strong {
+    font-weight: 700;
 }
