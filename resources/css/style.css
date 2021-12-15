@@ -68,3 +68,17 @@ nav .item span {
 #logo span strong {
     font-weight: 700;
 }
+
+/* DESKTOP */
+@media only screen and (min-width: 401px) {
+    .right-wrapper .item img {
+        display: none;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 400px) {
+    #logo span, .right-wrapper .item span {
+        display: none;
+    }
+}
