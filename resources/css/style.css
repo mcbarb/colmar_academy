@@ -1,0 +1,16 @@
+* {
+    /* border: 1px solid red; */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    display: inline-block;
+}
+
+.left-wrapper, .right-wrapper {
+    display: inline-block;
+}
