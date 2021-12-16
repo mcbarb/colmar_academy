@@ -15,6 +15,11 @@ html, body {
     padding: 0;
   }
 
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
 /* * {
     border: 0.5px solid red;
 } */
@@ -57,7 +62,7 @@ nav .item span {
     font-weight: 700;
 }
 
-/* DESKTOP */
+/* NAVIGATION.desktop */
 @media only screen and (min-width: 591px) {
     #logo {
         margin-right: auto;
@@ -73,9 +78,96 @@ nav .item span {
     }
 }
 
-/* MOBILE */
+/* NAVIGATION.mobile */
 @media only screen and (max-width: 590px) {
     nav .item span {
         display: none;
+    }
+}
+
+
+/* MAIN */
+main .main-row {
+    text-align: center;
+}
+
+main .main-row .main-container {
+    display: inline-block;
+}
+
+/* BANNER */
+#banner {
+    background-color: lightgray;
+}
+
+#banner .row {
+    display: flex;
+    max-width: 1100px;
+}
+
+#banner .col {
+    display: flex;
+    max-width: 1100px;
+    padding: 32px 0;
+}
+
+#banner .left.col {
+    flex-basis: 60%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#banner .left.col img {
+    height: 100%;
+    width: 100%;
+}
+
+#banner .right.col {
+    /* background-color: seagreen; */
+    padding-left: 0px;
+    padding-right: 24px;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #595959;
+    text-align: left;
+}
+
+#banner .right.col h1 {
+    font-weight: 700;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+#banner .right.col p {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+#banner .right.col a {
+    text-align: center;
+    /* margin: 0 0 10px; */
+    margin: 5px 24px 0 0;
+    padding: 8px;
+    color: white;
+    background-color: black;
+}
+
+#banner .right.col a:hover {
+    background-color: darkslateblue;
+}
+
+/* NAVIGATION.mobile */
+@media only screen and (max-width: 590px) {
+    #banner .left.col {
+        display: none;
+    }
+
+    #banner .right.col {
+        flex-basis: 100%;
+        padding-left: 24px;
     }
 }
