@@ -115,22 +115,62 @@ main .main-row .main-container {
     padding-right: 24px;
 }
 
+.col img {
+    width: 100%;
+}
+
 .col.right {
     padding-left: 0px;
     padding-right: 24px;
     flex-basis: 40%;
 }
 
-/* MAIN STRUCT.mobile */
-@media only screen and (max-width: 590px) {
-    .col.left {
-        display: none;
-    }
+h1, h2, h3, h4, p {
+    font-family: 'Roboto', sans-serif;
+    color: #595959;
+}
 
-    .col.right {
-        flex-basis: 100%;
-        padding-left: 24px;
-    }
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 13px;
+    padding: 0;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 11px;
+    padding: 0;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+p {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 9px;
+    padding: 0;
+}
+
+.fake-link {
+    color: steelblue;
+}
+
+.gray {
+    background-color: lightgray;
 }
 
 /* BANNER */
@@ -138,35 +178,15 @@ main .main-row .main-container {
     background-color: lightgray;
 }
 
-#banner .col.left img {
-    height: 100%;
-    width: 100%;
-}
-
 #banner .col.right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #595959;
     text-align: left;
-}
-
-#banner .col.right h1 {
-    font-weight: 700;
-    margin: 0 0 10px;
-    padding: 0;
-}
-
-#banner .col.right p {
-    margin: 0 0 10px;
-    padding: 0;
 }
 
 #banner .col.right a {
     text-align: center;
-    /* margin: 0 0 10px; */
     margin: 5px 24px 0 0;
     padding: 8px;
     color: white;
@@ -175,4 +195,70 @@ main .main-row .main-container {
 
 #banner .col.right a:hover {
     background-color: darkslateblue;
+}
+
+#banner .col.right p {
+    font-size: 17px;
+}
+
+/* INTRO */
+
+#intro {
+    background-color: white;
+}
+
+#intro .col.left {
+    display: block;
+    text-align: left;
+}
+
+#intro .author {
+    font-size: 9px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+#intro .col.right ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#intro .col.right li {
+    padding: 5px 0 0 3px;
+    border-bottom: solid 0.5px lightgray;
+}
+
+#intro .col.right li a {
+    display: flex;
+}
+
+#intro .col.right li a div.left {
+    flex-basis: 35%;
+
+}
+
+#intro .col.right li a div.right {
+    flex-basis: 65%;
+    padding: 0 0 0 12px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 590px) {
+    #banner .col.left,
+    #intro .col.left,
+    #thesis-exhibit .col.right {
+        display: none;
+    }
+
+    .col.right {
+        flex-basis: 100%;
+        padding-left: 24px;
+    }
 }
