@@ -21,41 +21,29 @@ html, body {
 
 /* NAVIGATION */
 
-.container {
+nav.container {
     display: flex;
     justify-content: space-between;
     height: 64px;
     align-items: center;
-}
-
-.item {
-    display: inline-block;
-}
-
-.right-wrapper .item {
-    margin-left: 16px;
-}
-
-.left-wrapper, .right-wrapper {
-    display: inline-block;
-    align-items: flex-end;
     padding: 0 24px;
-    height: 32px;
+}
+
+nav .item {
+    display: inline-block;
 }
 
 nav .item img {
-    /* display: inline-block; */
     height: 32px;
     float: left;
-    margin-right: 3px;
 }
 
 nav .item span {
     display: inline-block;
     height: 32px;
     font-size: 14px;
-    padding-top: 8px;
-    /* padding-bottom: 4px; */
+    padding-top: 7px;
+    margin-left: 3px;
 }
 
 #logo span {
@@ -70,15 +58,24 @@ nav .item span {
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 401px) {
-    .right-wrapper .item img {
+@media only screen and (min-width: 591px) {
+    #logo {
+        margin-right: auto;
+    }
+    nav .item {
+        margin-left: 16px;
+    }
+    nav .item img {
         display: none;
+    }
+    #logo img {
+        display: block;
     }
 }
 
 /* MOBILE */
-@media only screen and (max-width: 400px) {
-    #logo span, .right-wrapper .item span {
+@media only screen and (max-width: 590px) {
+    nav .item span {
         display: none;
     }
 }
