@@ -86,7 +86,7 @@ nav .item span {
 }
 
 
-/* MAIN */
+/* MAIN STRUCT */
 main .main-row {
     text-align: center;
 }
@@ -95,38 +95,55 @@ main .main-row .main-container {
     display: inline-block;
 }
 
-/* BANNER */
-#banner {
-    background-color: lightgray;
-}
-
-#banner .row {
+.row {
     display: flex;
     max-width: 1100px;
 }
 
-#banner .col {
+.col {
     display: flex;
     max-width: 1100px;
     padding: 32px 0;
 }
 
-#banner .left.col {
+.left {
     flex-basis: 60%;
+}
+
+.col.left {
     padding-left: 24px;
     padding-right: 24px;
 }
 
-#banner .left.col img {
+.col.right {
+    padding-left: 0px;
+    padding-right: 24px;
+    flex-basis: 40%;
+}
+
+/* MAIN STRUCT.mobile */
+@media only screen and (max-width: 590px) {
+    .col.left {
+        display: none;
+    }
+
+    .col.right {
+        flex-basis: 100%;
+        padding-left: 24px;
+    }
+}
+
+/* BANNER */
+#banner {
+    background-color: lightgray;
+}
+
+#banner .col.left img {
     height: 100%;
     width: 100%;
 }
 
-#banner .right.col {
-    /* background-color: seagreen; */
-    padding-left: 0px;
-    padding-right: 24px;
-    flex-basis: 40%;
+#banner .col.right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,18 +153,18 @@ main .main-row .main-container {
     text-align: left;
 }
 
-#banner .right.col h1 {
+#banner .col.right h1 {
     font-weight: 700;
     margin: 0 0 10px;
     padding: 0;
 }
 
-#banner .right.col p {
+#banner .col.right p {
     margin: 0 0 10px;
     padding: 0;
 }
 
-#banner .right.col a {
+#banner .col.right a {
     text-align: center;
     /* margin: 0 0 10px; */
     margin: 5px 24px 0 0;
@@ -156,18 +173,6 @@ main .main-row .main-container {
     background-color: black;
 }
 
-#banner .right.col a:hover {
+#banner .col.right a:hover {
     background-color: darkslateblue;
-}
-
-/* NAVIGATION.mobile */
-@media only screen and (max-width: 590px) {
-    #banner .left.col {
-        display: none;
-    }
-
-    #banner .right.col {
-        flex-basis: 100%;
-        padding-left: 24px;
-    }
 }
