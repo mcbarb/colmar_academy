@@ -247,6 +247,12 @@ p {
     padding: 0 0 0 12px;
 }
 
+/* START LEARNING */
+
+#start-learning {
+    background-color: lightgray;
+}
+
 
 
 /* MEDIA QUERIES */
